@@ -32,3 +32,7 @@ taskOne(() =>{
     })
   })
 })
+
+document.querySelector("button").addEventListener('click', () => {
+  
+})
