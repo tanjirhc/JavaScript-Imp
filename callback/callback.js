@@ -6,7 +6,7 @@ const taskOne = () =>{
 const taskTwo = () =>{
   setTimeout(() => {
     console.log('Task2. Data Loading');
-  }, 2000)
+  }, 3000)
 }
 const taskThree = () =>{
   console.log('Task3');
