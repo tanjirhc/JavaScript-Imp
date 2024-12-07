@@ -1,3 +1,5 @@
+console.log('welcome');
+
 const taskOne = () => {
   return new Promise((resolve, reject) =>{
     resolve('task 1 is completed')
@@ -27,3 +29,5 @@ taskOne()
 .then(res => console.log(res))
 .then(taskFour)
 .then(res => console.log(res))
+
+console.log('bye');
