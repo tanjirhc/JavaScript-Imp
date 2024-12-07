@@ -5,9 +5,10 @@ const taskOne = (callback) =>{
   callback()
 }
 
-const taskTwo = () =>{
+const taskTwo = (callback) =>{
   setTimeout(() => {
     console.log('Task2. Data Loading');
+    callback()
   }, 3000)
 }
 const taskThree = () =>{
@@ -21,5 +22,7 @@ const taskFive = () =>{
 }
 
 taskOne(function f1(){
-  taskTwo()
+  taskTwo(function f2(){
+    taskThree()
+  })
 })
