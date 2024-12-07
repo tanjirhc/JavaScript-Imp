@@ -5,4 +5,7 @@ function square(x){
   console.log(`square of ${x}: ${x * x}`);
 }
 
-square(5)
+
+
+const y = square
+y(5)
