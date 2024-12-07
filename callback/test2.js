@@ -20,4 +20,6 @@ const taskFive = () =>{
   console.log('Task5');
 }
 
-taskOne()
+taskOne(function f1(){
+  taskTwo()
+})
