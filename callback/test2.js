@@ -15,8 +15,9 @@ const taskThree = (callback) =>{
   console.log('Task3');
   callback()
 }
-const taskFour = () =>{
+const taskFour = (callback) =>{
   console.log('Task4');
+  callback()
 }
 const taskFive = () =>{
   console.log('Task5');
@@ -25,7 +26,9 @@ const taskFive = () =>{
 taskOne(function f1(){
   taskTwo(function f2(){
     taskThree(function f3(){
-      taskFour()
+      taskFour(function f4(){
+        taskFive()
+      })
     })
   })
 })
