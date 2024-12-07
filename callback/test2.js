@@ -1,7 +1,7 @@
 // callback and higher order function
 
 
-function square(){
+function square(x){
   console.log(`square of ${x}: ${x * x}`);
 }
 
