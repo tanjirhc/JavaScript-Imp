@@ -7,7 +7,9 @@ const taskOne = () => {
 }
 const taskTwo = () => {
   return new Promise((resolve, reject) =>{
-    resolve('task 2 is completed')
+    setTimeout(()=>{
+      resolve('task 2 is completed')
+    }, 2000)
   })
 }
 const taskThree = () => {
