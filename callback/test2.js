@@ -33,6 +33,8 @@ taskOne(() =>{
   })
 })
 
+console.log('hi');
 document.querySelector("button").addEventListener('click', () => {
-  
+  console.log('button is clicked');
 })
+console.log('bye');
