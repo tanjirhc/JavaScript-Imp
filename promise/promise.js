@@ -19,6 +19,6 @@ const promise2 = new Promise((resolve, reject) => {
 // console.log(promise1);
 
 Promise.all([promise1, promise2])
-.then((res) => console.log(res))
+.then(([res1, res2]) => console.log(res1, res2))
 
 console.log("end");
