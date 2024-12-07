@@ -8,7 +8,7 @@ function square(x){
 // y(5)
 
 function higherOrderFunction(num, callback) {
-
+  callback(num)
 }
 
 higherOrderFunction(6, square)
