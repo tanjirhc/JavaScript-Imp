@@ -19,5 +19,7 @@ const taskFour = () => {
   })
 }
 
-taskOne
+taskOne()
 .then((res) => console.log(res))
+.then(taskTwo)
+.then(res => console.log(res))
