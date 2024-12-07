@@ -2,8 +2,13 @@
 const taskOne = () =>{
   console.log('Task1');
 }
+
+const dataLoading = () => {
+  console.log('Task2. Data Loading');
+}
+
 const taskTwo = () =>{
-  console.log('Task2');
+  setTimeout(dataLoading, 2000)
 }
 const taskThree = () =>{
   console.log('Task3');
