@@ -7,7 +7,7 @@ const promise1 = new Promise((resolve, reject) =>{
   if(completedPromise) {
     resolve("completed promise 1")
   } else{
-    reject("not completed promise 1")
+    reject(new Error("Not completed promise 1"))
   }
 
 })
