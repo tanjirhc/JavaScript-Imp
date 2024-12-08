@@ -1,13 +1,14 @@
 console.clear()
-fetch('https://jsonplaceholder.typicode.com/posts/1', {
-  method: 'DELETE',
-})
-  .then((res) => {
-    if(!res.ok){
-      const message = `Error: ${res.status}`
-      throw new Error (message)
-    }
-    return res.json()
-  })
+
+const makeRequest = async () =>{
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const data = await res.json()
+  return data
+}
+
+const getData = () =>{
+  makeRequest()
   .then((res) => console.log(res))
-  .catch((err) => console.log(err))
+}
+
+getData()
