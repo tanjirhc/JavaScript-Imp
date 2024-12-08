@@ -1,14 +1,12 @@
 console.clear()
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
-  method: 'PUT',
+  method: 'PATCH',
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
   },
   body: JSON.stringify({
-    id: 1,
-    title: 'fooMA',
-    body: 'barMA',
-    userId: 1,
+
+    title: 'Tanjir-JSON File',
   })
 })
   .then((res) => {
