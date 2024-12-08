@@ -14,6 +14,10 @@ const getData = () => {
     console.log(JSON.parse(data));
   }
 
+  xhr.onerror = () => {
+    console.log('error is here');
+  }
+
   xhr.send()
 
 }
