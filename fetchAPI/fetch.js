@@ -1,5 +1,5 @@
 console.clear()
-fetch('https://jsonplaceholder.typicode.com/posts/101')
+fetch('https://jsonplaceholder.typicode.com/posts')
   .then((res) => {
     if(!res.ok){
       const message = `Error: ${res.status}`
