@@ -35,5 +35,13 @@ const sendData = () => {
   })
 }
 
+const updateData = () => { 
+  makeRequest('PUT', 'https://jsonplaceholder.typicode.com/posts/1', {
+    id: 1,
+    title: 'fooMA',
+    body: 'barMA',
+    userId: 1,
+  })
+}
 
-sendData()
+updateData()
