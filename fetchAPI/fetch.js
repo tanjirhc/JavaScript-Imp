@@ -10,23 +10,34 @@ const makeRequest = async (url, config) =>{
   return data
 }
 
-const updateData = () =>{
+const deleteData = () =>{
   makeRequest('https://jsonplaceholder.typicode.com/posts/1',{
-    method: 'PATCH',
-    body: JSON.stringify({
-    title: 'Dhaka Soft',
-
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
+    method: 'DELETE',
   })
   
   .then((res) => console.log(res))
   .catch((err) => console.log(err))
 }
 
-updateData()
+deleteData()
+
+// const updateData = () =>{
+//   makeRequest('https://jsonplaceholder.typicode.com/posts/1',{
+//     method: 'PATCH',
+//     body: JSON.stringify({
+//     title: 'Dhaka Soft',
+
+//   }),
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+//   })
+  
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err))
+// }
+
+// updateData()
 
 // const sendData = () =>{
 //   makeRequest('https://jsonplaceholder.typicode.com/posts',{
