@@ -1,13 +1,6 @@
 console.clear()
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
-  method: 'PATCH',
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-  body: JSON.stringify({
-
-    title: 'Tanjir-JSON File',
-  })
+  method: 'DELETE',
 })
   .then((res) => {
     if(!res.ok){
