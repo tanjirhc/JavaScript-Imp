@@ -12,12 +12,10 @@ const makeRequest = async (url, config) =>{
 
 const updateData = () =>{
   makeRequest('https://jsonplaceholder.typicode.com/posts/1',{
-    method: 'PUT',
+    method: 'PATCH',
     body: JSON.stringify({
-    id: 1,
-    title: 'foo',
-    body: 'bar',
-    userId: 1,
+    title: 'Dhaka Soft',
+
   }),
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
