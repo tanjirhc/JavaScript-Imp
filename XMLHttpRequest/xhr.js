@@ -27,34 +27,37 @@ const makeRequest = (method, url, data) => {
 
 const getData = () => { 
   makeRequest('GET', 'https://jsonplaceholder.typicode.com/posts')
+    .then((res) => console.log(res))
 }
 
-const sendData = () => { 
-  makeRequest('POST', 'https://jsonplaceholder.typicode.com/posts', {
-    title: 'foo',
-    body: 'bar',
-    userId: 1,
-  })
-}
+getData()
 
-const updateData = () => { 
-  makeRequest('PUT', 'https://jsonplaceholder.typicode.com/posts/1', {
-    id: 1,
-    title: 'fooMA',
-    body: 'barMA',
-    userId: 1,
-  })
-}
+// const sendData = () => { 
+//   makeRequest('POST', 'https://jsonplaceholder.typicode.com/posts', {
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1,
+//   })
+// }
 
-const updateSingleData = () => { 
-  makeRequest('PATCH', 'https://jsonplaceholder.typicode.com/posts/1', {
+// const updateData = () => { 
+//   makeRequest('PUT', 'https://jsonplaceholder.typicode.com/posts/1', {
+//     id: 1,
+//     title: 'fooMA',
+//     body: 'barMA',
+//     userId: 1,
+//   })
+// }
 
-    title: 'This is changed',
-  })
-}
+// const updateSingleData = () => { 
+//   makeRequest('PATCH', 'https://jsonplaceholder.typicode.com/posts/1', {
 
-const deleteData = () => { 
-  makeRequest('DELETE', 'https://jsonplaceholder.typicode.com/posts/1')
-}
+//     title: 'This is changed',
+//   })
+// }
 
-deleteData()
+// const deleteData = () => { 
+//   makeRequest('DELETE', 'https://jsonplaceholder.typicode.com/posts/1')
+// }
+
+// deleteData()
