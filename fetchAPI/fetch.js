@@ -10,10 +10,11 @@ const makeRequest = async (url, config) =>{
   return data
 }
 
-const sendData = () =>{
-  makeRequest('https://jsonplaceholder.typicode.com/posts',{
-    method: 'POST',
+const updateData = () =>{
+  makeRequest('https://jsonplaceholder.typicode.com/posts/1',{
+    method: 'PUT',
     body: JSON.stringify({
+    id: 1,
     title: 'foo',
     body: 'bar',
     userId: 1,
@@ -27,7 +28,26 @@ const sendData = () =>{
   .catch((err) => console.log(err))
 }
 
-sendData()
+updateData()
+
+// const sendData = () =>{
+//   makeRequest('https://jsonplaceholder.typicode.com/posts',{
+//     method: 'POST',
+//     body: JSON.stringify({
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1,
+//   }),
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+//   })
+  
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err))
+// }
+
+// sendData()
 
 // const getData = () =>{
 //   makeRequest('https://jsonplaceholder.typicode.com/posts')
