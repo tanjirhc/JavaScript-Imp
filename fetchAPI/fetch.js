@@ -1,14 +1,19 @@
 console.clear()
 
-const makeRequest = async () =>{
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+const makeRequest = async (url) =>{
+  const res = await fetch(url);
+  if(!res.ok){
+    const message = `Error : ${res.status}`
+    throw new Error(message)
+  }
   const data = await res.json()
   return data
 }
 
 const getData = () =>{
-  makeRequest()
+  makeRequest('https://jsonplaceholder.typicode.com/posts')
   .then((res) => console.log(res))
+  .catch((err) => console.log(err))
 }
 
 getData()
