@@ -51,4 +51,8 @@ const updateSingleData = () => {
   })
 }
 
-updateSingleData()
+const deleteData = () => { 
+  makeRequest('DELETE', 'https://jsonplaceholder.typicode.com/posts/1')
+}
+
+deleteData()
