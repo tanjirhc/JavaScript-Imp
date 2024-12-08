@@ -1,5 +1,4 @@
 console.clear()
 fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then((res) =>{
-    console.log(res);
-  })
+  .then((res) => res.json())
+  .then((res) => console.log(res))
