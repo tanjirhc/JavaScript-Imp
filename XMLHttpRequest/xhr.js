@@ -6,21 +6,23 @@ console.clear()
 
 const makeRequest = (method, url, data) => {
 
-  const xhr = new XMLHttpRequest()
-  xhr.open(method, url)
-
-  xhr.setRequestHeader('Content-Type', 'application/json')
+  return new Promise((resolve, reject)=>{
+    const xhr = new XMLHttpRequest()
+    xhr.open(method, url)
   
-  xhr.onload = () => {
-    let data = xhr.response
-    console.log(JSON.parse(data));
-  }
-
-  xhr.onerror = () => {
-    console.log('error is here');
-  }
-
-  xhr.send(JSON.stringify(data))
+    xhr.setRequestHeader('Content-Type', 'application/json')
+    
+    xhr.onload = () => {
+      let data = xhr.response
+      console.log(JSON.parse(data));
+    }
+  
+    xhr.onerror = () => {
+      console.log('error is here');
+    }
+  
+    xhr.send(JSON.stringify(data))
+  })
 }
 
 const getData = () => { 
