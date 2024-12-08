@@ -4,10 +4,10 @@ console.clear()
 // property - response, responseText, responseType, responseURL, statusText
 // function - open(), send(), setRequestHeader()
 
-const getData = () => {
-  
+const makeRequest = (method, url) => {
+
   const xhr = new XMLHttpRequest()
-  xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts')
+  xhr.open(method, url)
   
   xhr.onload = () => {
     let data = xhr.response
@@ -19,6 +19,10 @@ const getData = () => {
   }
 
   xhr.send()
+}
+
+const getData = () => { 
+  makeRequest('GET', 'https://jsonplaceholder.typicode.com/posts')
 
 }
 
