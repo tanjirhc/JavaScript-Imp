@@ -1,14 +1,29 @@
 console.clear()
 
-const makeRequest = (config) => {
+const makeRequest = async (config) => {
 
-  return axios(config)
+  return await axios(config)
 }
 
-const getData = () => {
-  makeRequest('https://jsonplaceholder.typicode.com/posts')
+const createData = () => {
+  makeRequest({
+    url : 'https://jsonplaceholder.typicode.com/posts',
+    method: 'post',
+    data : JSON.stringify({
+      title: 'foo',
+      body: 'bar',
+      userId: 1,
+    }),
+  })
   .then((res) =>  console.log(res)  )
   .catch((err) =>  console.log(err)  )
 }
+createData()
 
-getData()
+// const getData = () => {
+//   makeRequest('https://jsonplaceholder.typicode.com/posts')
+//   .then((res) =>  console.log(res)  )
+//   .catch((err) =>  console.log(err)  )
+// }
+// getData()
+
