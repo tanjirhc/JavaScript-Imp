@@ -1,11 +1,12 @@
 console.clear()
 
 axios
-  .post('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
+  .put('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'PUT',
     body: JSON.stringify({
-      title: 'foo',
-      body: 'bar',
+      id:1,
+      title: 'fooma',
+      body: 'barma',
       userId: 1,
     }),
     
