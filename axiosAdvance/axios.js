@@ -1,13 +1,11 @@
 console.clear()
 
 axios
-  .put('https://jsonplaceholder.typicode.com/posts/1', {
-    method: 'PUT',
+  .patch('https://jsonplaceholder.typicode.com/posts/1', {
+    
     body: JSON.stringify({
-      id:1,
-      title: 'fooma',
-      body: 'barma',
-      userId: 1,
+
+      body: 'barmaeleven',
     }),
     
   })
